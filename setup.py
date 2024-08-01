@@ -17,11 +17,15 @@ def package_data(pkg, roots):
 
 setup(
     name="portal_api",
-    version="0.2",
-    author="Luis Santana",
-    author_email="luis.santana@uchile.cl",
+    version="0.3",
+    author="Oficina EOL UChile",
+    author_email="eol-ing@uchile.cl",
     description=".",
-    packages=['portal_api'],
+    packages=['portal_api','portal_api.settings'],
+    package_dir={
+        "portal_api": "portal_api",
+        "portal_api.settings": "portal_api/settings"
+    },
     install_requires=["unidecode>=1.1.1"],
     classifiers=[
         "Programming Language :: Python :: 2",
